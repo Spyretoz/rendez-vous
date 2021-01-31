@@ -1,0 +1,82 @@
+body
+{
+	background-image: url("Abstract-Background-White.jpg");
+	background-position: center;
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: 100% 100%;
+	color: #2e2e1f;
+	
+}
+
+.nav-link
+{
+	color: #3d3d29;
+}
+
+h1
+{
+	font-family: Vollkorn; 
+	font-size: 49px; 
+	font-style: normal; 
+	font-variant: normal; 
+	font-weight: 400; 
+	line-height: 112.7px;
+}
+
+h5
+{
+	font-size: 30px; 
+}
+
+label{
+    float: center;
+    width: 200px;
+    text-align: right;
+    margin-right: 2%
+}
+
+input
+{
+	/*padding: 12px 20px;*/
+  	float: center;
+  	
+}
+
+.Form
+{
+	background: rgba(234, 234, 225, 0.5);
+	height: 620px;
+	width: 500px;
+    margin: 0 auto;
+    border-radius: 12px;
+    
+}
+
+table, th, td 
+{
+	background: rgba(234, 234, 225, 0.5);
+	border: 1px solid black;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+	color: black;
+	font-size: 30px;
+	text-align: center;
+}
+
+th, td 
+{
+	padding: 15px;
+}
+
+.button 
+{
+	font-family: Vollkorn; 
+	font-size: 25px; 
+	border-radius: 12px;
+	border: none;
+	width: 12.5rem;
+	background-color: #669999;
+	color: #fff;
+	box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
+}
