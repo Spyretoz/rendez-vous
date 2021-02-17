@@ -97,16 +97,10 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter
 			http.csrf().disable()
 					.authorizeRequests() // authorize
 					.antMatchers("/").permitAll() // allow "/" to be seen without authentication
-					.antMatchers("/api/**").permitAll()
-					.antMatchers("/api/**").permitAll()
-					//.antMatchers("/api/**").hasRole("ADMIN")
-					
-					.antMatchers("/user/**").permitAll()
-					//.antMatchers("/user/**").hasRole("ADMIN") // allow "/user" and subdirectories to be seen only from admin
-					//.antMatchers("/carrier/**").hasRole("MANAGER") // allow "/carrier" and subdirectories to be seen only from manager
-					.antMatchers("/carrier/**").permitAll()
-					.antMatchers("/form/**").permitAll() // allow "/form" and subdirectories to be seen only from chief
-					//.antMatchers("/form/**").hasRole("MANAGER, CHIEF") // allow "/carrier" and subdirectories to be seen only from manager
+					.antMatchers("/api/**").hasRole("ADMIN")
+					.antMatchers("/user/**").hasRole("ADMIN") // allow "/user" and subdirectories to be seen only from admin
+					.antMatchers("/carrier/**").hasRole("MANAGER") // allow "/carrier" and subdirectories to be seen only from manager
+					.antMatchers("/form/**").hasRole("CHIEF") // allow "/form" and subdirectories to be seen only from chief
 					.anyRequest().authenticated() // all requests are authenticated
 					.and().formLogin().permitAll() // allow "/login"
 					.defaultSuccessUrl("/", true) // set default page for success login

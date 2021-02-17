@@ -1,14 +1,14 @@
 <sec:authorize access="hasRole('ROLE_MANAGER')">	
 	<div class="Form">
-		<h5> Form's ID <input type="text" id="formid" /></h5>
+		<h5> Form's ID <input type="text" id="formid" required/></h5>
 		<br>
-		<h5> Carrier's Chief <input type="text" id="carrchief" /></h5>
+		<h5> Carrier's Chief <input type="text" id="carrchief" required/></h5>
 		<br>
-		<h5> Carrier's Name <input type="text" id="carrname" /></h5>
+		<h5> Carrier's Name <input type="text" id="carrname" required/></h5>
 		<br>
-		<h5>Amount Of Employees <input type="text" id="amntofemps" /></h5>
+		<h5>Amount Of Employees <input type="text" id="amntofemps" required/></h5>
 		<br>
-		<h5>Carrier's Location <input type="text" id="carrlocation" /></h5>
+		<h5>Carrier's Location <input type="text" id="carrlocation" required/></h5>
 		<br>
 	
 		

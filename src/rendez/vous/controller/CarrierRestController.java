@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import rendez.vous.dao.CarrierDAO;
 import rendez.vous.entity.Carrier;
 
-//@Secured("ROLE_MANAGER")
+@Secured("ROLE_MANAGER")
 @RestController
 @RequestMapping("/carrier")
 public class CarrierRestController 

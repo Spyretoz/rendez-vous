@@ -6,7 +6,7 @@
 	<h2>Choose the id of the user and press DELETE</h2>
 	<br><br>
 
-	<h5>ID: <input type="text" id="idtext" autocomplete="off" placeholder="Write any id..."></h5>
+	<h5>ID: <input type="text" id="idtext" autocomplete="off" placeholder="Write any id..." required></h5>
 	
 	<br><br>
 	<button type="submit" class="button" id="del_button" value="Submit" onclick="begin()">DELETE</button>

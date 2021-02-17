@@ -5,19 +5,19 @@
 	<br>
 
 	<h5>
-		FirstName <input type="text" id="firstname" />
+		FirstName <input type="text" id="firstname" required/>
 	</h5>
 	<br>
 	<h5>
-		LastName <input type="text" id="lastname" />
+		LastName <input type="text" id="lastname" required/>
 	</h5>
 	<br>
 	<h5>
-		Username <input type="text" id="username" />
+		Username <input type="text" id="username" required/>
 	</h5>
 	<br>
 	<h5>
-		Password <input type="text" id="password" />
+		Password <input type="text" id="password" required/>
 	</h5>
 	
 	<br>

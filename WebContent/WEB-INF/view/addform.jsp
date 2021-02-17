@@ -4,13 +4,13 @@
 		<br>
 	
 		<h5>
-			<label>Chief's Name </label><input type="text" id="chiefName" placeholder="Name"/>
+			<label>Chief's Name </label><input type="text" id="chiefName" placeholder="Name" required/>
 		</h5>
 		
 		<br><br>
 	
 		<h5>
-			<label>Amount of employees </label><input type="text" id="amountofEmployees" placeholder="Amount"/>
+			<label>Amount of employees </label><input type="text" id="amountofEmployees" placeholder="Amount" required/>
 		</h5>
 		
 		<br><br>

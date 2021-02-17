@@ -18,7 +18,7 @@ import org.springframework.web.server.ResponseStatusException;
 import rendez.vous.dao.FormDAO;
 import rendez.vous.entity.Form;
 
-//@Secured("ROLE_CHIEF")
+@Secured("ROLE_CHIEF")
 @RestController
 @RequestMapping("/form")
 public class FormRestController 
