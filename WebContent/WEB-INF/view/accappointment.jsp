@@ -31,16 +31,6 @@
 
 
 	<script>
-	//var settings = {
-	//		url: "http://localhost:8086/InsideUser/appointment/update",
-	//		method: "PUT",
-	//		timeout: 0,
-	//		data: "{\r\n\"id\": 23,\r\n\"accepted\": 0\r\n}",
-	//};
-
-	//$.ajax(settings).done(function (response) {
-	//		console.log(response);
-	//});
 		const rid = document.getElementById("appoint");
 		
 	
