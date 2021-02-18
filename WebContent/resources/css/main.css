@@ -52,6 +52,15 @@ input
     
 }
 
+.FormCar
+{
+	background: rgba(234, 234, 225, 0.5);
+	height: 700px;
+	width: 500px;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
 table, th, td 
 {
 	background: rgba(234, 234, 225, 0.5);

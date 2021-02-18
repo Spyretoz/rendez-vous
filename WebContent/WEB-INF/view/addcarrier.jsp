@@ -14,7 +14,7 @@
 		
 	</div>
 	<br>
-	<button type="submit" class="button" id="add_button" value="Submit" onclick="begin()">Add Carrier</button>
+	<button type="submit" class="button" id="add_button" value="Submit" onclick="add()">Add Carrier</button>
  	<br><br>
  	
  	<div class="res" id="res">
@@ -32,7 +32,7 @@
 	</div>
 	
 	
- 	<script> 	
+ 	<script>
  		const table = document.getElementById("form_table");
  		
  		const formid = document.getElementById("formid");
@@ -41,8 +41,9 @@
 		const amntofemps = document.getElementById("amntofemps");
 		const carrlocation = document.getElementById("carrlocation");
  	
+		
 		var settings = {
-				"url": "http://localhost:8086/InsideUser/form/show/",
+				"url": "http://localhost:8086/InsideUser/form/show",
 				"method": "GET",
 				"timeout": 0,
 		};
@@ -66,18 +67,6 @@
 			}
 		});
 		
-		function begin() 
-		{
-			if (formid.value == "" || carrchief.value == "" || carrname.value == "" || amntofemps.value == "" || carrlocation.value == "") 
-			{
-				alert("Field(s) missing!");
-			} 
-
-			else 
-			{
-				add();
-			}
-		}
 	
 		function add() 
 		{
@@ -102,9 +91,10 @@
 
 			$.ajax(settings).done(function (response) {
 					console.log(response);
+					location.reload();
 			});
-			
 			location.reload();
+
 		}
 	</script>
 </sec:authorize>

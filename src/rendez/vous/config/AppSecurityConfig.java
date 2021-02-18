@@ -100,7 +100,7 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter
 					.antMatchers("/api/**").hasRole("ADMIN")
 					.antMatchers("/user/**").hasRole("ADMIN") // allow "/user" and subdirectories to be seen only from admin
 					.antMatchers("/carrier/**").hasRole("MANAGER") // allow "/carrier" and subdirectories to be seen only from manager
-					.antMatchers("/form/**").hasRole("CHIEF") // allow "/form" and subdirectories to be seen only from chief
+					.antMatchers("/form/**").hasAnyRole("MANAGER", "CHIEF") // allow "/form" and subdirectories to be seen only from chief
 					.anyRequest().authenticated() // all requests are authenticated
 					.and().formLogin().permitAll() // allow "/login"
 					.defaultSuccessUrl("/", true) // set default page for success login
