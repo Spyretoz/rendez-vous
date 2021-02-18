@@ -4,7 +4,7 @@
 	<br>
 	
 	<h5>
-		Appointment's ID: <input type="text" id="amountofEmployees" placeholder="ID"/>
+		Appointment's ID: <input type="text" id="appoint" placeholder="ID"/>
 	</h5>
 		
 		<br>
@@ -31,10 +31,23 @@
 
 
 	<script>
+	//var settings = {
+	//		url: "http://localhost:8086/InsideUser/appointment/update",
+	//		method: "PUT",
+	//		timeout: 0,
+	//		data: "{\r\n\"id\": 23,\r\n\"accepted\": 0\r\n}",
+	//};
+
+	//$.ajax(settings).done(function (response) {
+	//		console.log(response);
+	//});
+		const rid = document.getElementById("appoint");
+		
+	
 		const table = document.getElementById("appointments_table");
 	
 		var settings = {
-				"url": "http://localhost:8086/InsideUser/appointment/show/",
+				"url": "http://localhost:8086/InsideUser/appointment/show",
 				"method": "GET",
 				"timeout": 0,
 		};
@@ -57,15 +70,23 @@
 				row.insertCell(5).innerHTML = obj.info;
 				row.insertCell(6).innerHTML = obj.accepted;
 				
-				//var btn = document.createElement('input');
-				//btn.type = "button";
-				//btn.className = "btn";
-				//btn.value = entry.enable;
-				// btn.onclick = (function(entry) {return function() {chooseUser(entry);}})(entry);
-				//td.appendChild(btn);
-				
-				//row.insertCell(6).innerHTML = "";
 			}
 		});
+		
+		function begin()
+		{
+			var xhr = new XMLHttpRequest();
+			var Url = "http://localhost:8086/InsideUser/appointment/update";
+			xhr.open("PUT", Url);
+			xhr.setRequestHeader("Content-Type", "application/json");
+			var myrespo = JSON.stringify({
+			    "id": parseInt(rid.value), 
+			    "accepted": 1
+			});
+			xhr.send(myrespo);
+			
+			location.reload();
+			alert("Appointment has been accepted");
+		}
 	</script>
 </sec:authorize>

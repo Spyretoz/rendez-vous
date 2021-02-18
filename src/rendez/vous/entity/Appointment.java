@@ -13,19 +13,19 @@ public class Appointment
 {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "app_id")
+	@Column(name = "app_id", unique = true, nullable = false, updatable = false)
 	private int id;
-	@Column(name = "app_time")
+	@Column(name = "app_time", updatable = false)
 	private String time;
-	@Column(name = "app_date")
+	@Column(name = "app_date", updatable = false)
 	private String date;
-	@Column(name = "app_citizen")
+	@Column(name = "app_citizen", updatable = false)
 	private String citizen;
-	@Column(name = "app_carrier")
+	@Column(name = "app_carrier", updatable = false)
 	private String carrier;
-	@Column(name = "app_extraINFO")
+	@Column(name = "app_extraINFO", updatable = false)
 	private String info;
-	@Column(name = "accepted")
+	@Column(name = "accepted", updatable = true)
 	private int accepted;
 	
 	

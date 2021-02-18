@@ -97,6 +97,7 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter
 			http.csrf().disable()
 					.authorizeRequests() // authorize
 					.antMatchers("/").permitAll() // allow "/" to be seen without authentication
+					.antMatchers("/appointment/**").hasAnyRole("EMPLOYEE")
 					.antMatchers("/api/**").hasRole("ADMIN")
 					.antMatchers("/user/**").hasRole("ADMIN") // allow "/user" and subdirectories to be seen only from admin
 					.antMatchers("/carrier/**").hasRole("MANAGER") // allow "/carrier" and subdirectories to be seen only from manager
