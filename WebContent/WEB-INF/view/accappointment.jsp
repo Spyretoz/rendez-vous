@@ -75,8 +75,8 @@
 			});
 			xhr.send(myrespo);
 			
-			location.reload();
 			alert("Appointment has been accepted");
+			location.reload();
 		}
 	</script>
 </sec:authorize>

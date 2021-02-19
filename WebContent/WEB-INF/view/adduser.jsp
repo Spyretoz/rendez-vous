@@ -17,12 +17,12 @@
 	</h5>
 	<br>
 	<h5>
-		Password <input type="text" id="password" required/>
+		Password <input type="password" id="password" required/>
 	</h5>
 	
 	<br>
 	<p>
-		<button type="submit" class="button" id="add_button" value="Submit" onclick="begin()">ADD</button>
+		<button type="submit" class="button" id="add_button" value="Submit" onclick="add()">ADD</button>
 	</p>
 	<br>
 	</div>
@@ -34,18 +34,6 @@
 		const password = document.getElementById("password");
 	
 
-		function begin() 
-		{
-			if (firstname.value == "" || lastname.value == "" || username.value == "" || password.value == "") 
-			{
-				alert("Field(s) missing!");
-			} 
-
-			else 
-			{
-				add();
-			}
-		}
 	
 		function add() 
 		{
@@ -57,10 +45,7 @@
 			xhr.send(myrespo);
 			alert("User added!");
 			
-			firstname.value = '';
-			lastname.value = '';
-			username.value = '';
-			password.value = '';
+			location.reload();
 		}
 	</script>
 

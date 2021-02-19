@@ -17,11 +17,7 @@ const id_text = document.getElementById("idtext");
 
 function begin()
 {
-	if (id_text.value == "") 
-	{
-		alert("Field is empty!");
-	}
-	else if(isNaN(id_text.value) || id_text.value <= 0)
+	if(isNaN(id_text.value) || id_text.value <= 0)
 	{
 		alert("Id must be postive number");
 	}
@@ -47,6 +43,7 @@ function del()
 	$.ajax(settings).done(function (response) {
 	  console.log(response);
 	  alert("User with id:"+id_text.value+" has been removed");
+	  location.reload();
 	});
 }
 </script>

@@ -49,10 +49,7 @@
 			xhr.send(myrespo);
 			alert("Form added!");
 			
-			chiefName.value = '';
-			numberEmployees.value = '';
-			carLoc.value = '';
-			carName.value = '';
+			location.reload();
 		}
 	</script>
 </sec:authorize>
